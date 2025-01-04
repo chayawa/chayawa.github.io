@@ -1,0 +1,645 @@
+/*General*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #222a35 /* #fffcf5*/;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+p {
+  color: #f9ede8; /*rgb(85, 85, 85);*/
+}
+
+.title,
+h3,
+h2 {
+  color: #c7986a;
+}
+
+/*Transition*/
+a,
+.btn {
+  transition: all 300ms ease;
+  color: #f9ede8;
+}
+
+/*Desktop Nav*/
+
+nav,
+.nav-links {
+  display: flex;
+  color: #c7986a;
+}
+
+nav {
+  justify-content: space-around;
+  align-items: center;
+  height: 17vh;
+}
+.nav-links {
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.5rem;
+}
+
+a {
+  color: #f9ede8;
+  text-decoration: none;
+  text-decoration-color: #f9ede8;
+}
+
+a:hover {
+  color: #c7986a;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: rgb(181, 181, 181);
+}
+
+/* Logo Styling */
+.logo {
+  position: absolute; /* Enables absolute positioning */
+  top: 20px; /* Adjust the top distance from the edge */
+  left: 20px; /* Adjust the left distance from the edge */
+  z-index: 10; /* Ensures it appears above other elements if overlapping */
+}
+
+.logo img {
+  width: 120px; /* Adjust size as needed */
+  height: auto; /* Maintain aspect ratio */
+  cursor: pointer; /* Makes it clickable if needed */
+  border-radius: 50%; /* Makes the image circular */
+  border: 0.1px solid #fffcf5; /* Optional: Add a border around the circle */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for a polished look */
+  object-fit: cover; /* Ensures the image fits within the circle */
+}
+
+.logo:hover {
+  cursor: default;
+}
+
+/*Hamburger Menu*/
+#hamburger-nav {
+  display: none;
+}
+
+.hamburger-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.hamburger-icon span {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  width: fit-content;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: black;
+  text-decoration: none;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links li {
+  list-style: none;
+}
+
+.menu-links.open {
+  max-height: 300px;
+}
+
+.hamburger-icon.open span:first-child {
+  transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon.open span:last-child {
+  transform: rotate(-45deg) translate(10px, -5px);
+}
+
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+.hamburger-icon span:first-child {
+  opacity: 1;
+}
+
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+/*Sections*/
+
+section {
+  padding-top: 4vh;
+  height: 96vh;
+  margin: 0 10rem;
+  box-sizing: border-box;
+  min-height: fit-content;
+}
+
+.section-container {
+  display: flex;
+}
+
+/*Profile Section*/
+
+#profile {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  height: 80vh;
+}
+
+.section__pic-container {
+  display: flex;
+  height: 400px;
+  width: 400px;
+}
+.section__pic-container img {
+  width: 400px; /* Adjust size */
+  height: 400px; /* Ensure it's square */
+  border-radius: 50%; /* Makes the image circular */
+  object-fit: cover; /* Ensures the image fits inside the circle */
+  border: 5px solid #ffffff; /* Optional: Adds a border */
+}
+
+.section__text {
+  align-self: center;
+  text-align: center;
+}
+
+.section__text p {
+  font-weight: 600;
+}
+
+.section__text__p1 {
+  text-align: center;
+}
+
+.section__text__p2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+}
+
+#socials-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+/*Icon*/
+
+.icon {
+  cursor: pointer;
+  height: 2rem;
+  flex-direction: column;
+  align-items: center; /* Centers all items horizontally */
+  justify-content: center;
+}
+
+/*Buttons*/
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  font-weight: 600;
+  transition: all 300ms ease;
+  padding: 1rem;
+  width: 8rem;
+  border-radius: 2rem;
+}
+
+.btn-color-1,
+.btn-color-2 {
+  border: #c7986a 0.1rem solid;
+}
+
+.btn-color-1:hover,
+.btn-color-2:hover {
+  cursor: pointer;
+}
+
+.btn-color-1,
+.btn-color-2:hover {
+  background: #c7986a;
+  color: #f9ede8;
+}
+
+.btn-color-1:hover {
+  background: #f9ede8;
+  color: #222a35;
+}
+
+.btn-color-2 {
+  background: none;
+  color: #c7986a;
+}
+
+.btn-color-2:hover {
+  border: #f9ede8 0.1rem solid;
+}
+
+.btn-container {
+  gap: 1rem;
+}
+
+/*About Section*/
+#about,
+#education {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  text-align: center; /* Centers the content inside the section */
+  padding: 10px; /* Adds spacing inside the section */
+  color: #fffcf5; /* Adjusts text color for the whole section */
+  background-color: none; /* Background color for the About section */
+}
+
+.about-container {
+  padding: 10px;
+}
+
+/* Arrow Icon */
+.arrow {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: auto;
+  cursor: pointer;
+  z-index: 100;
+  transition: transform 0.2s ease;
+}
+.arrow:hover {
+  transform: scale(1.2); /* Enlarges the arrow slightly on hover */
+}
+
+.about-description {
+  font-size: 18px;
+  line-height: 1.8; /* Adds spacing between lines for readability */
+  max-width: 800px; /* Limits paragraph width for better readability */
+  margin: 0 auto; /* Centers the paragraph */
+}
+/* Education Section 
+#education {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #fffcf5;
+  background-color: #1a1a1a;
+  margin: 0;
+  padding: 20px;
+}
+*/
+/* Education Container */
+.education-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 500px;
+  padding: 10px;
+  border: 2px solid #c7986a;
+  border-radius: 8px;
+  background-color: #f9ede8;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 20px auto; /* Centers the education container */
+}
+
+/* University Logo */
+.uni-logo {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  transition: opacity 0.3s ease;
+}
+
+/* Credentials */
+.credentials {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #c7986a;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.education-container:hover .credentials {
+  opacity: 1;
+}
+.education-container:hover .uni-logo {
+  opacity: 0.3; /* Dim the logo on hover */
+}
+
+/* Credentials Text */
+.credentials p {
+  margin: 5px 0;
+  font-size: 15px;
+}
+.credentials p b {
+  font-weight: bold;
+}
+.credentials p:first-child {
+  font-size: 24px; /* Larger font size for "BASc" */
+  font-weight: bold; /* Makes "BASc" bold */
+}
+
+/* Work Section */
+#work {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  background-color: #222a35;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Work Container */
+.work-container,
+.work-container2 {
+  position: relative;
+  display: flex;
+  flex-direction: column; /* Stack logo and info vertically */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  width: 80%; /* Ensure it scales for smaller screens */
+  max-width: 500px; /* Limit max size */
+  /*height: 15%;*/
+  padding: 20px;
+  border: 2px solid #c7986a;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 20px auto; /* Add spacing between rows */
+}
+
+/* Logos Styling */
+.fluor-logo,
+.hydro-logo {
+  width: auto; /* Ensure width adjusts automatically */
+  max-width: 300px; /* Force a max width for both logos */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure the image fits properly */
+  margin-bottom: 10px; /* Add some space below the logo */
+  display: block; /* Ensure the image behaves as a block element */
+}
+
+/* Work Info (Both Info Blocks) */
+.work-info,
+.work-info2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #c7986a;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; /* Hidden by default */
+  transition: opacity 0.3s ease;
+}
+
+/* Hover Effects*/
+.work-container:hover .work-info,
+.work-container2:hover .work-info2 {
+  opacity: 1; /* Show the info on hover */
+}
+
+.work-container:hover .fluor-logo,
+.work-container2:hover .hydro-logo {
+  opacity: 0.3; /* Dim the logo on hover */
+}
+
+/* Text Styling (Both Info Blocks) */
+.work-info p,
+.work-info2 p {
+  margin: 5px 0;
+  font-size: 15px;
+}
+
+.work-info p:first-child,
+.work-info2 p:first-child {
+  font-size: 24px; /* Larger font size for the title */
+  font-weight: bold;
+}
+
+/* Leadership Section */
+#leadership {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  background-color: #222a35;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Leadership Container */
+.leadership-container,
+.leadership-container2,
+.leadership-container3 {
+  position: relative;
+  display: flex;
+  flex-direction: column; /* Stack logo and info vertically */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  width: 90%; /* Ensure it scales for smaller screens */
+  max-width: 500px; /* Limit max size */
+  /*height: 15%;*/
+  padding: 20px;
+  border: 2px solid #c7986a;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 20px auto; /* Add spacing between rows */
+}
+.leadership-container2 {
+  background-color: #296182;
+}
+
+/* Logos Styling */
+.ieee-logo,
+.ecess-logo,
+.tm-logo {
+  width: auto; /* Ensure width adjusts automatically */
+  max-width: 250px; /* Force a max width for both logos */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure the image fits properly */
+  margin-bottom: 10px; /* Add some space below the logo */
+  display: block; /* Ensure the image behaves as a block element */
+}
+
+/* Specific Adjustment for BC Hydro Logo 
+.hydro-logo {
+  max-height: 10px; /* Limit the height if width doesn't work 
+  max-width: 25px; /* Enforce max width for Hydro logo 
+}*/
+/* Leadership Info (Both Info Blocks) */
+.leader-info,
+.leader-info2,
+.leader-info3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #c7986a;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; /* Hidden by default */
+  transition: opacity 0.3s ease;
+}
+
+/* Hover Effects*/
+.leadership-container:hover .leader-info,
+.leadership-container2:hover .leader-info2,
+.leadership-container3:hover .leader-info3 {
+  opacity: 1; /* Show the info on hover */
+}
+
+.leadership-container:hover .ieee-logo,
+.leadership-container2:hover .ecess-logo,
+.leadership-container3:hover .tm-logo {
+  opacity: 0.3; /* Dim the logo on hover */
+}
+
+/* Text Styling (Both Info Blocks) */
+.leader-info p,
+.leader-info2 p,
+.leader-info3 p {
+  margin: 5px 0;
+  font-size: 15px;
+}
+
+.leader-info p:first-child,
+.leader-info2 p:first-child,
+.leader-info3 p:first-child {
+  font-size: 24px; /* Larger font size for the title */
+  font-weight: bold;
+}
+
+.leader-info p:first-child,
+.leader-info p:nth-child(3) {
+  /* Targets "Student Panelist" and "UBC Student Branch Chair" */
+  font-size: 24px; /* Larger font size for emphasis */
+  font-weight: bold; /* Make it bold */
+  text-align: center; /* Center the text */
+}
+
+/* CONTACT */
+
+#contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 70vh;
+}
+
+.contact-info-upper-container {
+  display: flex;
+  justify-content: center;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  background: (250, 250, 250);
+  margin: 2rem auto;
+  padding: 0.5rem;
+}
+
+.contact-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem;
+}
+
+.contact-info-container p {
+  font-size: larger;
+}
+
+.contact-icon {
+  cursor: default;
+}
+
+.email-icon {
+  height: 2.5rem;
+}
+
+/* FOOTER SECTION */
+
+footer {
+  height: 26vh;
+  margin: 0 1rem;
+}
+
+footer p {
+  text-align: center;
+}

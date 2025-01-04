@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">
+        <img src="./assets/logo (1).png" alt="Site Logo" />
+      </div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#leadership">Leadership</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <nav id="hamburger-nav">
+      <div class="logo">Chayanika Awasthi</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+
+          <li><a href="#education" onclick="toggleMenu()">Education</a></li>
+          <li><a href="#work" onclick="toggleMenu()">Work</a></li>
+          <li><a href="#leadership" onclick="toggleMenu()">Leadership</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/profilepic.png" alt="Chayanika profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Chayanika Awasthi</h1>
+        <p class="section__text__p2">Electrical Engineer</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/Resume_ChayanikaA.pdf')"
+          >
+            Resume
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://linkedin.com/chayanikaawasthi'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/chayawa'"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <!-- Section Title -->
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <!-- About Me Section -->
+      <div class="about-container">
+        <p class="about-description">
+          Hi there! I am a final-year electrical engineering student with a
+          passion for power systems. I love understanding how electricity
+          flows—from a generating station all the way to the plug in your house.
+          I’m also deeply interested in renewable energy and committed to
+          building a more sustainable future. Electrical engineering excites me
+          because it’s where innovation meets real-world impact.
+        </p>
+      </div>
+
+      <!-- Navigation Arrow 
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="arrow"
+        onclick="location.href='./#education'"
+      />-->
+    </section>
+
+    <section id="education">
+      <!-- Education Section -->
+      <h1 class="title">Education</h1>
+      <div class="education-container">
+        <img src="./assets/ubcfull.png" alt="UBC Logo" class="uni-logo" />
+        <div class="credentials">
+          <p>BASc in Electrical Engineering '25</p>
+          <p>
+            <b>Relevant Coursework:</b>
+            <i
+              >Power System Analysis, Power System Optimization, Power System
+              Protection</i
+            >
+          </p>
+        </div>
+      </div>
+      <!-- Navigation Arrow --->
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="arrow"
+        onclick="location.href='./#profile'"
+      />
+    </section>
+    <section id="work">
+      <!--Work Section-->
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Work Experience</h1>
+      <div class="work-container">
+        <img src="./assets/fluor.png" alt="Fluor Logo" class="fluor-logo" />
+        <div class="work-info">
+          <p>Engineering Technician II</p>
+          <p>
+            <b>May 2023 - Aug 2024</b>
+          </p>
+        </div>
+      </div>
+      <div class="work-container2">
+        <img src="./assets/hydro.png" alt="Hydro Logo" class="hydro-logo" />
+        <div class="work-info2">
+          <p>Site C Dam Co-op</p>
+          <p>
+            <b>Sep 2020 - Apr 2021</b>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="leadership">
+      <!--Leadership Section-->
+      <h1 class="title">Leadership</h1>
+      <div class="leadership-container">
+        <img src="./assets/ieee.jpg" alt="IEEE Logo" class="ieee-logo" />
+        <div class="leader-info">
+          <p>Student Panelist</p>
+          <p>
+            <b>IEEE Board of Directors Strategic Retreat - Jan 2025</b>
+          </p>
+          <p>IEEE UBC Student Branch Chair</p>
+          <p>
+            <b>May 2023 - Aug 2024</b>
+          </p>
+        </div>
+      </div>
+      <div class="leadership-container2">
+        <img src="./assets/ecess.jpeg" alt="Ecess Logo" class="ecess-logo" />
+        <div class="leader-info2">
+          <p>VP Communications</p>
+          <p>
+            <b>Sep 2021 - Apr 2023</b>
+          </p>
+        </div>
+      </div>
+      <div class="leadership-container3">
+        <img src="./assets/tm.png" alt="TM Logo" class="tm-logo" />
+        <div class="leader-info3">
+          <p>VP Public Relations</p>
+          <p>
+            <b>Apr 2021 - Apr 2022</b>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <!--Contact Section-->
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto: chayanika@ieee.org">chayanika@ieee.org</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p>
+            <a href="https://www.linkedin.com/in/chayanikaawasthi/">LinkedIn</a>
+          </p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#leadership">Leadership</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2025 Chayanika Awasthi. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
