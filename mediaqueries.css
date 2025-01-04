@@ -1,8 +1,69 @@
-@media screen and (max-width: 1200px) {
+/*@media screen and (max-width: 1200px) {
   #desktop-nav {
     display: none;
   }
   #hamburger-nav {
     display: flex;
+  }
+}
+*/
+@media screen and (max-width: 1200px) {
+  /* Hide desktop nav */
+  #desktop-nav {
+    display: none;
+  }
+
+  /* Show hamburger nav */
+  #hamburger-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align hamburger to the right */
+    padding: 1rem;
+    background-color: #222a35;
+  }
+
+  .hamburger-menu {
+    position: relative;
+  }
+
+  .hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+
+  .hamburger-icon span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #c7986a;
+    transition: all 0.3s ease;
+  }
+
+  .menu-links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 70%;
+    height: 100vh;
+    background-color: #222a35;
+    transform: translateX(100%); /* Initially hidden */
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    gap: 1.5rem;
+  }
+
+  .menu-links.open {
+    transform: translateX(0); /* Slide in when open */
+  }
+
+  .menu-links a {
+    color: #f9ede8;
+    text-decoration: none;
+    font-size: 1.5rem;
   }
 }
